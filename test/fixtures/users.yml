@@ -9,9 +9,3 @@ valid:
   name: Yusuf
   email: yusuf@gmail.com
   password: password
-
-no_email:
-  id: 2
-  name: Yusuf
-  email: nil
-  password: password
