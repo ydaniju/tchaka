@@ -2,5 +2,5 @@
 
 class User < ApplicationRecord
   enum role: { basic: 0, admin: 1 }
-  validates :email, presence: true
+  validates :email, presence: true, uniqueness: true
 end

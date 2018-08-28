@@ -31,4 +31,18 @@ class UsersControllerTest < ActionDispatch::IntegrationTest
 
     assert_equal status, 200
   end
+
+  test 'valid user update return status 200' do
+    user = users(:valid)
+    put "/users/#{user.id}", params: { user: { name: 'Newmann' } }
+
+    assert_equal status, 200
+  end
+
+  test 'valid user update return status 202' do
+    user = users(:valid)
+    delete "/users/#{user.id}"
+
+    assert_equal status, 202
+  end
 end
