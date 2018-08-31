@@ -10,3 +10,15 @@ test("Renders 'No users yet' if no user was found", () => {
 
   expect(getByText('No users yet')).toBeInTheDocument();
 });
+
+test('Fetches and renders all users', () => {
+  const { getByText } = render(
+    <Users users={[
+      { name: 'Yusuf', email: 'danij@gmail.com' },
+      { name: 'Justin', email: 'justin@bieber.com' },
+    ]} />
+  );
+
+  expect(getByText('danij@gmail.com')).toBeInTheDocument();
+  expect(getByText('justin@bieber.com')).toBeInTheDocument();
+});
