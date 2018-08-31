@@ -6,7 +6,8 @@
   "author": "Yusuf Daniju <danijuyusuf@outlook.com>",
   "scripts": {
     "start": "webpack-dev-server --mode development --open",
-    "build": "webpack --mode production"
+    "build": "webpack --mode production",
+    "test": "./node_modules/jest/bin/jest.js"
   },
   "license": "MIT",
   "devDependencies": {

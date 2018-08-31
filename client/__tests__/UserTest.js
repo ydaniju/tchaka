@@ -9,4 +9,4 @@ test('User component receives props and renders user details', () => {
   );
 
   expect(getByTestId('user-details')).toHaveTextContent('danij@gmail.com');
-})
+});
